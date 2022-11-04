@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Jogo de pedra, papel e tesoura</title>
+	<meta charset = "utf-8">
+	<script type = "text/javascript">
+		function gerando(min, max){
+			var possibilidades = max - min;
+			var num1 = Math.random() * possibilidades;
+			if(form1.jogadas.value==1){
+				if (num1 > 2){
+					alert("Você escolheu papel e ganhou de pedra");
+				}else if (num1 > 1){
+					alert("Voce escolheu papel e perdeu para tesoura");
+				}else{
+					alert("Você escolheu papel e empatou com papel");
+				}
+			}else if(form1.jogadas.value==2){
+				if (num1 > 2){
+					alert("Você escolheu pedra e ganhou de tesoura");
+				}else if (num1 > 1){
+					alert("Voce escolheu pedra e perdeu para papel");
+				}else{
+					alert("Você escolheu pedra e empatou com pedra");
+				}
+			}else if(form1.jogadas.value==3){
+				if (num1 > 2){
+					alert("Você escolheu tesoura e ganhou de papel");
+				}else if (num1 > 1){
+					alert("Voce escolheu tesoura e perdeu para pedra");
+				}else{
+					alert("Você escolheu tesoura e empatou com tesoura");
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+<form name ="form1" onsubmit = "gerando(0,3)">
+	Digite 1 para papel, 2 para pedra e 3 para tesoura: <input type ="text" name = "jogadas"/>
+	<input type = "submit" value = "Jogar"/>
+</form>
+
+</body>
+</html>
